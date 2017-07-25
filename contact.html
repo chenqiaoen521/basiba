@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>八思巴防水·产品展示</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+	<meta name="renderer" content="webkit">
+	<meta name="description" content="Free Web tutorials">
+	<meta name="keywords" content="HTML,CSS,JavaScript">
+
+	<link rel="shortcut icon" type="image/x-icon" href="images/ico.ico" media="screen">
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/base.js"></script>
+    <script type="text/javascript" src="js/simpleSlider.js"></script>
+    <script type="text/javascript" src="js/backstretch.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script type="text/javascript">
+		new WOW().init();
+	</script>
+    <!--引用百度地图API-->
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=hGIfXg4AruiE4ynf8MIgqcfb"></script>
+</head>
+<body>
+<!-- 顶部 -->
+<div class="top">
+	<div class="container">
+		<div class="t-phone fl">咨询电话：<span>0371-3802788</span></div>
+		<div class="t-fill fr">
+			<label class="sea-box" role="search"><input type="text" name=""><a href="#" role="button"></a></label>
+			<span class="fr"><a href="login.html">登录</a>|<a href="sign.html">注册</a></span>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</div>
+<!-- 导航 -->
+<!-- 电脑端导航 -->
+<div class="navBox">
+	<div class="container">
+		<a class="logo fl" href="index.html"><img src="images/logo.png" alt=""></a>
+		<ul class="nav fr">
+			<li><a href="index.html">首页</a></li>
+			<li><a href="about.html">走近八四八</a></li>
+			<li><a href="products.html">产品展示</a></li>
+			<li><a href="news.html">新闻动态</a></li>
+			<li><a href="cases.html">工程案例</a></li>
+			<li><a href="advantage.html">技术研发</a></li>
+			<li><a href="jobs.html">人才发展</a></li>
+			<li class="on"><a href="contact.html">联系我们</a></li>
+		</ul>
+		<div class="clearfix"></div>
+		<a class="menu"></a>
+	</div>
+</div>
+<!-- 移动端导航 -->	
+<div class="dropdown">
+	<ul class="drop-menu">
+		<li><a href="index.html">首页</a></li>
+		<li><a href="about.html">走近八四八</a></li>
+		<li><a href="products.html">产品展示</a></li>
+		<li><a href="news.html">新闻动态</a></li>
+		<li><a href="cases.html">工程案例</a></li>
+		<li><a href="advantage.html">技术研发</a></li>
+		<li><a href="jobs.html">人才发展</a></li>
+		<li class="on"><a href="contact.html">联系我们</a></li>
+	</ul>
+</div>
+<!-- 右侧在线咨询 -->
+<div class="online wow fadeInRight animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+	<img class="close2" src="images/close.png" alt="">
+	<img class="logo2" src="images/logo.png" alt="">
+	<ul class="on-lis">
+		<li><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=463608983&amp;site=qq&amp;menu=yes"><img src="images/qq.png" alt=""><span>QQ咨询</span></a></li>
+		<li class="weixin"><img src="images/weixin.png" alt=""><span>官方微信</span>
+			<div class="on-hover">
+				<img src="images/code.jpg" alt="">
+			</div>
+		</li>
+		<li class="phone"><a href="tel:0371-3802788" target="_blank"><img src="images/phone.png" alt=""><span>咨询电话</span>
+			<div class="on-hover">
+				<p>0371-3802788</p>
+			</div></a>
+		</li>
+	</ul>
+	<img class="cloud" src="images/cloud.png" alt="">
+</div>
+
+<!-- banner图 -->
+<div class='pagewrap'>
+    <div class='pageblock' id='fullscreen'>
+        <div class='slider'>
+            <div class='slide' id="fiveth">
+                <div class='slidecontent ban-con wow slideInDown animiated' data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+                    <h3>还在为地面漏水烦恼吗？<br>八四八为您解决</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+	<div class="contact">
+    	<div id="dituContent" class="cl wow fadeInDown animiated" data-wow-delay="0.4s" data-wow-duration="0.8s" style="visibility: visible; animation-duration: .8s;-webkit-animation-delay: 0.4s;"></div>
+		<script type="text/javascript">
+        //创建和初始化地图函数：
+        function initMap(){
+            createMap();//创建地图
+            setMapEvent();//设置地图事件
+            addMapControl();//向地图添加控件
+            addMarker();//向地图中添加marker
+        }
+        
+        //创建地图函数：
+        function createMap(){
+            var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+            var point = new BMap.Point(111.088292,34.694303);//定义一个中心点坐标
+            map.centerAndZoom(point,15);//设定地图的中心点和坐标并将地图显示在地图容器中
+            window.map = map;//将map变量存储在全局
+        }
+        
+        //地图事件设置函数：
+        function setMapEvent(){
+            map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+            map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+            map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+            map.enableKeyboard();//启用键盘上下左右键移动地图
+        }
+        
+        //地图控件添加函数：
+        function addMapControl(){
+            //向地图中添加缩放控件
+        var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+        map.addControl(ctrl_nav);
+            //向地图中添加缩略图控件
+        var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+        map.addControl(ctrl_ove);
+            //向地图中添加比例尺控件
+        var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+        map.addControl(ctrl_sca);
+        }
+        
+        //标注点数组
+        var markerArr = [{title:"三门峡八四八化工厂",content:"河南省三门峡西站神泉路西段",point:"111.087969|34.693234",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
+             ];
+        //创建marker
+        function addMarker(){
+            for(var i=0;i<markerArr.length;i++){
+                var json = markerArr[i];
+                var p0 = json.point.split("|")[0];
+                var p1 = json.point.split("|")[1];
+                var point = new BMap.Point(p0,p1);
+                var iconImg = createIcon(json.icon);
+                var marker = new BMap.Marker(point,{icon:iconImg});
+                var iw = createInfoWindow(i);
+                var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+                marker.setLabel(label);
+                map.addOverlay(marker);
+                label.setStyle({
+                            borderColor:"#808080",
+                            color:"#333",
+                            cursor:"pointer"
+                });
+                
+                (function(){
+                    var index = i;
+                    var _iw = createInfoWindow(i);
+                    var _marker = marker;
+                    _marker.addEventListener("click",function(){
+                        this.openInfoWindow(_iw);
+                    });
+                    _iw.addEventListener("open",function(){
+                        _marker.getLabel().hide();
+                    })
+                    _iw.addEventListener("close",function(){
+                        _marker.getLabel().show();
+                    })
+                    label.addEventListener("click",function(){
+                        _marker.openInfoWindow(_iw);
+                    })
+                    if(!!json.isOpen){
+                        label.hide();
+                        _marker.openInfoWindow(_iw);
+                    }
+                })()
+            }
+        }
+        //创建InfoWindow
+        function createInfoWindow(i){
+            var json = markerArr[i];
+            var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
+            return iw;
+        }
+        //创建一个Icon
+        function createIcon(json){
+            var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+            return icon;
+        }
+        
+        initMap();//创建和初始化地图
+    </script>
+		<div class="cr">
+        	<div class="title wow fadeInRight animiated" data-wow-delay="0.4s" data-wow-duration="0.8s" style="visibility: visible; animation-duration: .8s;-webkit-animation-delay: 0.4s;">
+                <h4><em></em><span>联系我们</span><em></em></h4>
+                <p>contact us</p>
+            </div>
+            <div class="detail">
+            	<p class="bg1 wow fadeInUp animiated" data-wow-delay="0.4s" data-wow-duration="0.8s" style="visibility: visible; animation-duration: .8s;-webkit-animation-delay: 0.4s;">地址：河南省三门峡西站神泉路西段</p>
+                <p class="bg2 wow fadeInDown animiated" data-wow-delay="0.4s" data-wow-duration="0.8s" style="visibility: visible; animation-duration: .8s;-webkit-animation-delay: 0.4s;">咨询电话：0398-3802788　13939879766　13333980848</p>
+                <p class="bg3 wow fadeInUp animiated" data-wow-delay="0.4s" data-wow-duration="0.8s" style="visibility: visible; animation-duration: .8s;-webkit-animation-delay: 0.4s;">传真号码：0398-3817088</p>
+                <p class="bg4 wow fadeInDown animiated" data-wow-delay="0.4s" data-wow-duration="0.8s" style="visibility: visible; animation-duration: .8s;-webkit-animation-delay: 0.4s;">E-mail：basiba848@126.com</p>
+                <p class="bg5 wow fadeInUp animiated" data-wow-delay="0.4s" data-wow-duration="0.8s" style="visibility: visible; animation-duration: .8s;-webkit-animation-delay: 0.4s;"><span>二维码：</span><img src="images/code.jpg" alt=""></p>
+            </div>
+        </div>
+	</div>
+    <img class="smpic wow fadeInRight animiated" data-wow-delay="0.8s" data-wow-duration="0.8s" style="visibility: visible; animation-duration: .8s;-webkit-animation-delay: 0.8s;" src="images/contact_27.png" alt="">
+    <div class="message wow fadeInLeft animiated" data-wow-delay="0.8s" data-wow-duration="0.8s" style="visibility: visible; animation-duration: .8s;-webkit-animation-delay: 0.8s;">
+    	<form>
+            <div class="row">
+                <span>姓名：</span>
+                <input>
+            </div>
+            <div class="row">
+                <span>手机号码：</span>
+                <input>
+            </div>
+            <div class="row">
+                <span>E-mail：</span>
+                <input>
+            </div>
+            <div class="row">
+                <span>咨询内容：</span>
+                <textarea></textarea>
+            </div>
+            <div class="button wow fadeInUp animiated" data-wow-delay="0.8s" data-wow-duration="0.8s" style="visibility: visible; animation-duration: .8s;-webkit-animation-delay: 0.8s;">
+            	<button type="submit">提交</button>
+            	<button type="reset">重置</button>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- 页脚 -->
+<div class="footer">
+	<div class="container">
+		<p>Copyright © 三门峡是八四八化工厂<span>All Rights Reserved<span><span>豫ICP备05008282号<span><a href="http://www.cccuu.com">技术支持：灵秀网络</a></p>
+	</div>
+</div>
+</body>
+</html>
